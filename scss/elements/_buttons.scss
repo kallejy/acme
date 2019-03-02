@@ -1,0 +1,62 @@
+// Button styles
+
+.btn,
+a.btn {
+	padding: 1.25rem 2.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: .1em;
+
+	&.primary {
+		background: $contrast-color;
+		color: $black;
+		font-size: 1rem;
+
+		&:hover {
+			color: rgba($black, 50/100);
+		}
+	}
+}
+
+.ib {
+	display: inline-block;
+}
+
+.read-more,
+a.read-more {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	cursor: pointer;
+}
+
+
+// Icons
+
+.icon {
+	&.size-sm {
+		width: 36px;
+	}
+}
+
+
+
+
+// Settings
+
+.toggle-settings {
+	position: absolute;
+	width: 52px;
+	height: 52px;
+	background: $black;
+	left: -52px;
+	top: 1rem;
+	z-index: 999;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid $white;
+	border-right: none;
+}

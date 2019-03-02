@@ -1,0 +1,136 @@
+// Main nav styles
+
+.main-logo {
+	width: 112px;
+	@include bp-sm {
+		width: 92px;
+	}
+}
+
+
+.burger-btn {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  outline: none;
+  border: none;
+  background: $primary-color;
+  @include border-radius(100%);
+  @include transition(all .2s); 
+	cursor: pointer;
+	z-index: 999;
+
+	display: none;
+	
+	&.on-primary {
+		background: $third-color;
+	}
+
+	@include bp-md {
+		margin-right: 1.5rem;
+	}
+}
+
+.toggle-nav {
+  display: flex;
+  align-items: center;
+}
+
+.burger,
+.burger:before,
+.burger:after {
+	position: absolute;
+	background: $white;
+	width: 26px;
+	height: 2px;
+  left: 11px;
+	display: block;
+  @include transition(all .2s);
+	@include border-radius(2px);	
+	z-index: 999;
+}
+
+.burger__on-primary {
+	background: $primary-color;
+
+	&:after,
+	&:before {
+		background: $primary-color;
+	}
+}
+
+.burger {
+  top: 26px;
+}
+
+.burger:before {
+	content: "";
+	width: 30px;
+	height: 2px;
+	top: -8px;
+  left: 0;
+}
+
+.burger:after {
+	content: "";
+	width: 30px;
+	height: 2px;
+	top: 8px;
+  left: 0;
+}
+
+
+
+
+
+.main-nav__list {
+	li {
+		display: inline-block;
+		margin-right: 1.75em;
+
+		@include bp-sm {
+			margin-right: 1em;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+		
+		a {
+			font-size: 1.125em;
+			color: $white;
+
+			&:hover {
+				color: rgba($white, 50/100);
+			}
+		}
+	}
+}
+
+.state--scrolled {
+	.main-nav__list {
+		a {
+			color: $black;
+
+			&:hover {
+				color: rgba($black, 50/100);
+			}
+		}
+	}
+
+	.main-logo {
+		svg {
+			path {
+				fill: $black;
+			}
+		}
+	}
+
+	.main-settings {
+		svg {
+			path {
+				fill: $black;
+			}
+		}
+	}
+}

@@ -1,0 +1,239 @@
+// Modules
+
+.box {
+	width: 100%;
+	padding: .5rem 1.25rem;
+}
+
+
+
+// Positionering
+
+.relative {
+	position: relative;
+}
+
+.aboslute {
+	position: absolute;
+}
+
+
+
+
+
+// Hero intro
+
+.hero-image {
+  height: 72vh;
+  background: url(../assets/img/acme_hero.jpg);
+  background-position: center;
+  background-size: cover;
+
+  @include bp-xl {
+    height: 100vh;
+  }
+}
+
+
+
+// Image content section
+
+.image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+
+  &.flex-middle-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.section-headline {
+  position: absolute;
+  top: 0;
+  width: 1024px;
+  height: 100%;
+  left: 50%;
+  margin-left: -512px;
+  text-align: center;
+  display: flex;
+
+  @include bp-lg {
+    width: 768px;
+    margin-left: -384px;
+  }
+
+  @include bp-md {
+    width: 512px;
+    margin-left: -256px;
+  }
+
+  @include bp-sm {
+    width: 300px;
+    margin-left: -150px;
+  }
+
+  &.fl-top {
+    align-items: flex-start;
+  }
+
+  &.fl-top__hero {
+    align-items: flex-start;
+    margin-top: 100px;
+  }
+
+  &.fl-middle {
+    align-items: center;
+  }
+  
+  &.fl-bottom {
+    align-items: flex-end;
+  }
+}
+
+.section-content {
+  text-align: center;
+  width: 100%;
+}
+
+
+
+
+// Contact table
+
+table {
+  position: relative;
+  float: left;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid $border-color;
+  line-height: 1.618;
+}
+
+th, td {
+  text-align: left;
+  padding: 1rem;
+}
+
+th {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+tr:nth-child(even) {
+  background-color: rgba($lt-grey, 50/100);
+}
+
+.expandable {
+  position: relative;
+  float: left;
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  padding-bottom: 4.5rem;
+
+  &.full-height {
+    max-height: none;
+  }
+}
+
+.white-fade {
+  position: absolute;
+  height: 130px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 50%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 50%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+
+  &.fade-hidden {
+    display: none;
+  }
+}
+
+
+
+
+// Logos
+
+.logo-item {
+  opacity: .6;
+  @include transition(opacity, $base-duration);
+  
+  .svg {
+    width: 50%;
+    path,
+    polygon,
+    polyline {
+      fill: $white;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+// Site settings
+
+.site-settings {
+  position: fixed;
+  width: 280px;
+  background: $black;
+  right: 0;
+  bottom: 8rem;
+  padding: 2rem;
+  border: 1px solid $white;
+  border-right: none;
+  transform: translateX(280px);
+  @include transition(transform, $base-duration);
+
+  @include bp-sm {
+    bottom: 3rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  &.settings-active {
+    transform: translateX(0);
+  }
+}
+
+.color-switch {
+  font-size: 1rem;
+  line-height: 1.618;
+
+  span.standard {
+    color: $white;
+  }
+
+  span.yellow {
+    color: yellow;
+  }
+  
+  span.green {
+    color: green;
+  }
+
+  span.red {
+    color: red;
+  }
+}

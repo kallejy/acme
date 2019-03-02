@@ -1,0 +1,15 @@
+// Header styles
+
+#header {
+	z-index: 98;
+	position: fixed;
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid $white;
+	@include transition(all $base-duration);
+
+	&.state--scrolled {
+		background: $white;
+		border-bottom: 1px solid $border-color;
+	}
+}

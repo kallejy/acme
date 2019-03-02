@@ -1,0 +1,26 @@
+// Footer styles
+
+footer {
+	position: relative;
+	float: left;
+	width: 100%;
+	background: $white;
+	border-top: 1px solid $black;
+
+	a:link,
+	a:visited {
+		color: $black;
+		@include bp-xs {
+			font-size: 12px;
+		}
+	}
+
+  p {
+		color: $black;
+		margin-bottom: 0;
+
+		@include bp-xs {
+			font-size: 12px;
+		}
+  }
+}

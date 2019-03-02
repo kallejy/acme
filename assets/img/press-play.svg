@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="106px" viewBox="0 0 106 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-907.000000, -494.000000)">
+            <g id="Group" transform="translate(909.000000, 496.000000)">
+                <circle id="Oval" stroke="#FFFFFF" stroke-width="4" fill-opacity="0" fill="#D8D8D8" cx="51" cy="51" r="51"></circle>
+                <path d="M57.7275578,35.9615277 L75.2454838,65.9922579 C75.8020444,66.9463618 75.4797719,68.1709972 74.5256681,68.7275578 C74.2197959,68.9059832 73.8720353,69 73.517926,69 L38.482074,69 C37.3775045,69 36.482074,68.1045695 36.482074,67 C36.482074,66.6458907 36.5760908,66.2981301 36.7545162,65.9922579 L54.2724422,35.9615277 C54.8290028,35.0074238 56.0536382,34.6851513 57.0077421,35.2417119 C57.3057493,35.4155495 57.5537202,35.6635204 57.7275578,35.9615277 Z" id="Triangle" fill="#FFFFFF" transform="translate(56.000000, 51.000000) rotate(-270.000000) translate(-56.000000, -51.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

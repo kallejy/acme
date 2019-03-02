@@ -1,0 +1,255 @@
+// Typografi
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  font-family: $headline;
+  color: $black;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+
+  &.hero-title {
+    @include bp-md {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+h2, .h2 {
+  font-size: 2.75em;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h3, .h3 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: .875rem;
+
+  &.on-image {
+    display: inline;
+    line-height: 1.5;
+    font-size: 3rem;
+    background: $primary-color;
+    box-shadow: 16px 0 0 $primary-color, -16px 0 0 $primary-color;
+  }
+}
+
+h4, .h4 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+
+h5, .h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $primary-color;
+  margin-bottom: .35rem;
+}
+
+p {
+  font-family: $copy;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: $copy-color; 
+  line-height: 1.618;
+  margin-bottom: 1em;
+
+  &.columned-text {
+    column-count: 2;
+    column-gap: 3.125rem;
+    -moz-column-count: 2;
+    -moz-column-gap: 3.125rem;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 3.125rem;
+    @include bp-md {
+      -column-count: 1;
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+    }
+  }
+
+  a:link,
+  a:visited {
+    color: $black;
+
+    &:hover {
+      color: $primary-color; 
+    }
+  }
+}
+
+a:link,
+a:visited {
+  font-size: 1.25em;
+  color: $secondary-color;
+  @include transition(color .2s);
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+.arrow-down {
+  font-size: 1.25em;
+  color: $secondary-color;
+  @include transition(color .2s);
+  padding-right: 20px;
+  cursor: pointer;
+
+  &:after {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    content: "";
+    width: 14px;
+    height: 8px;
+    background: url(../assets/img/arrow_down.svg);
+  }
+
+  &.btn-close {
+    &:after {
+      transform: rotate(180deg);
+      top: 4px;
+    }
+  }
+}
+
+.link-arrow,
+p a.link-arrow {
+  font-size: 1rem;
+  position: relative;
+  font-family: $headline;
+  font-weight: 400;
+  color: $secondary-color;
+  border-bottom: none;
+
+  &:after {
+      position: absolute;
+      float: right;
+      top: 7px;
+      right: -1rem;
+      content: "";
+      width: 6px;
+      height: 12px;
+      background: url(assets/img/arrow_primary.svg);
+    }
+
+  &:hover {
+    color: darken($primary-color, 20%);
+    border-bottom: none;
+  }
+
+}
+
+.hero-sub {
+  text-shadow: 0px 0px 12px rgba($black, 50/100);
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  margin-bottom: 1.4em;
+  @include bp-md {
+    font-size: 1.225rem;
+  }
+  @include bp-lg {
+    font-size: 1rem;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+.italic,
+em {
+  font-style: italic;
+}
+
+blockquote {
+  background: $lt-grey;
+  border-left: 4px solid $primary-color;
+  color: $black;
+  margin: 1rem 0;
+  padding: 1rem 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  line-height: 1.618;
+}
+blockquote:before {
+  color: $black;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+.white {
+  color: $white;
+}
+
+.rh-r {
+  color: $primary-color;
+}
+
+.rh-r-bg {
+  background: $primary-color;
+  display: inline-block;
+  padding: 1.75rem 2rem 1rem 2rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.rh-category {
+  text-transform: uppercase;
+  color: $primary-color;
+  font-size: 1.25em;
+  margin-bottom: 0;
+}
+
+.sm-co {
+  font-size: 0.875rem;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.balance-text {
+  text-wrap: balance;
+}
+
+.uc {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.absolute-bottom {
+  position: absolute;
+  bottom: .5rem;
+  padding: 0 1.5rem;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.type-margin-0 {
+  margin-bottom: 0;
+}
