@@ -50,7 +50,7 @@
   </div>
 </section>
 
-<section class="content"  id="about">
+<section class="content  white-bg"  id="about">
   <div class="container-fluid  container">
     
     <div class="row">
@@ -62,7 +62,7 @@
     </div>
 
     <div class="row  no-top">
-      <div class="col-xs-12  col-sm-6">
+      <div class="col-xs-12  col-sm-6  mb-md-1">
         <img src="assets/img/acme_image_2.jpg" alt="Bild föreställande ett case av ACME">
       </div>
       <div class="col-xs-12  col-sm-6">
@@ -84,7 +84,7 @@
     </div>
   
     <div class="row  no-top  center-xs  border-bottom  onblack-border">
-      <div class="col-xs-12  col-sm-6">
+      <div class="col-xs-12  col-sm-6  mb-md-1">
         <img src="assets/img/acme_ref1.jpg" alt="Bild på John Doe, CEO, Apple Inc">
         <h4 class="white  mt-1">"Vi har arbetat med ACME i över 30 olika projekt, alltid leverans utöver det vanliga"</h4>
         <p class="white">John Doe, CEO, Apple Inc</p>
@@ -117,7 +117,7 @@
   </div>
 </section>
 
-<section class="content"  id="contact">
+<section class="content  white-bg"  id="contact">
   <div class="container-fluid  container">
       
     <div class="row">
@@ -137,35 +137,35 @@
                 <th onclick="sortTable(1)">Titel</th>
               </tr>
               <tr>
-                <td>Britt-Marie Mördberg</td>
+                <td>Britt-Marie Eklund</td>
                 <td>Administration</td>
               </tr>
               <tr>
-                <td>North/South</td>
+                <td>Grant Newton</td>
                 <td>VD</td>
               </tr>
               <tr>
-                <td>Alfreds Futterkiste</td>
+                <td>Misha Head</td>
                 <td>Försäljningschef</td>
               </tr>
               <tr>
-                <td>Koniglich Essen</td>
+                <td>Arlo Camacho</td>
                 <td>Säljare</td>
               </tr>
               <tr>
-                <td>Magazzini Alimentari Riuniti</td>
+                <td>Milena Vargas</td>
                 <td>Kalkyl</td>
               </tr>
               <tr>
-                <td>Paris specialites</td>
+                <td>Bill Whitfield</td>
                 <td>Projektledare</td>
               </tr>
               <tr>
-                <td>Island Trading</td>
+                <td>Abigale Alston</td>
                 <td>Projektledare</td>
               </tr>
               <tr>
-                <td>Laughing Bacchus Winecellars</td>
+                <td>Carter Betts</td>
                 <td>Produktionschef</td>
               </tr>
             </table>
@@ -201,31 +201,14 @@
     <img class="icon  ico-settings  size-sm  svg" src="assets/img/icon_settings.svg" alt="Knapp för att ändra inställningar.">
   </a>
   <h5 class="white">Välj bakgrundsfärg:</h5>
+  
   <ul class="color-switch">
-    <li><a onClick="setStandard()"><span class="standard">Standard</span></a></li>
-    <li><a onClick="setYellow()"><span class="yellow">Gul</span></a></li>
-    <li><a onClick="sethGreen()"><span class="green">Grön</span></a></li>
-    <li><a onClick="setRed()"><span class="red">Röd</span></a></li>
+      <li><a class="bg-standard"><span class="standard">Standard</span></a></li>
+      <li><a class="bg-yellow"><span class="yellow">Gul</span></a></li>
+      <li><a class="bg-green"><span class="green">Grön</span></a></li>
+      <li><a class="bg-red"><span class="red">Röd</span></a></li>
   </ul>
-  <!--<select id='test' onchange="remember(this.selectedIndex);">
-    <option value='standard' selected="selected">Standard</option>
-    <option value='one' onClick='setYellow()'>Gul</option>
-    <option value='two'>Grön</option>
-    <option value='three'>Röd</option>
-  </select>-->
-  <script type="text/javascript">
-    if(localStorage!=null) {
-      if(localStorage["sel"]!=null) {
-        document.getElementById("test").selectedIndex = localStorage["sel"];
-      }
-    }
-    //alert("d");
-    function remember(index) {
-      if(localStorage!=null) {
-        localStorage["sel"] = index;
-      }
-    }
-    </script>
+
 </div>
 
 </body>

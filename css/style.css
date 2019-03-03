@@ -1506,6 +1506,12 @@ Copyright (c) 2014 Daniel Eden
   margin-bottom: 2rem;
 }
 
+@media only screen and (max-width: 64em) {
+  .mb-md-1 {
+    margin-bottom: 2rem;
+  }
+}
+
 .ml-1 {
   margin-left: 1.5rem;
 }

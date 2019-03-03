@@ -20,8 +20,8 @@ jQuery(document).ready(function($) {
   });
 
   // Toggle settings
-  $( ".site-settings" ).click(function() {
-    $(this).toggleClass("settings-active");
+  $( ".toggle-settings" ).click(function() {
+    $(".site-settings").toggleClass("settings-active");
   });
 
   // Replace all SVG images with inline SVG
@@ -147,18 +147,41 @@ function sortTable(n) {
 
   // Site bg-color
 
-  function setStandard() {
-    document.body.style.backgroundColor = "";
+  // Store bg-color values
+  var btnStandard = jQuery('.bg-standard');
+  var btnYellow = jQuery('.bg-yellow');
+  var btnGreen = jQuery('.bg-green');
+  var btnRed = jQuery('.bg-red');
+  var changeThis = jQuery('.white-bg');
+
+  // Get localStorage value
+  var storedBgColor = localStorage.getItem('.white-bg');
+
+  // Check which value the user chose last time
+  if (storedBgColor) {
+    changeThis.css('background-color', storedBgColor);
+  } else {
+      // Set default color to white
+      changeThis.css('background-color', 'white');
   }
 
-  function setYellow() {
-    document.body.style.backgroundColor = "yellow";
-  }
+  // Save value to localStorage and change bg-color on the fly
+  btnYellow.click(function() {
+    changeThis.css('background-color', 'yellow');
+    localStorage.setItem('.white-bg', 'yellow');
+  });
 
-  function sethGreen() {
-    document.body.style.backgroundColor = "green";
-  }
+  btnGreen.click(function() {
+    changeThis.css('background-color', 'green');
+    localStorage.setItem('.white-bg', 'green');
+  });
+  
+  btnRed.click(function() {
+    changeThis.css('background-color', 'red');
+    localStorage.setItem('.white-bg', 'red');
+  });
 
-  function setRed() {
-    document.body.style.backgroundColor = "red";
-  }
+  btnStandard.click(function() {
+    changeThis.css('background-color', 'white');
+    localStorage.setItem('.white-bg', 'white');
+  });
