@@ -1,9 +1,11 @@
 // Main nav styles
 
 .main-logo {
-	width: 112px;
-	@include bp-sm {
-		width: 92px;
+	svg {
+		width: 112px;
+		@include bp-sm {
+			width: 92px;
+		}
 	}
 }
 
