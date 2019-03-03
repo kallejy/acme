@@ -147,7 +147,7 @@ function sortTable(n) {
 
   // Site bg-color
 
-  // Store bg-color values
+  // Set variables
   var btnStandard = jQuery('.bg-standard');
   var btnYellow = jQuery('.bg-yellow');
   var btnGreen = jQuery('.bg-green');
@@ -157,7 +157,7 @@ function sortTable(n) {
   // Get localStorage value
   var storedBgColor = localStorage.getItem('.white-bg');
 
-  // Check which value the user chose last time
+  // Check if value exists otherwise set default color
   if (storedBgColor) {
     changeThis.css('background-color', storedBgColor);
   } else {

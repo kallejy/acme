@@ -4709,6 +4709,10 @@ a.read-more {
   }
 }
 
+.center-aligned {
+  width: 100%;
+}
+
 .image-overlay {
   position: absolute;
   width: 100%;
